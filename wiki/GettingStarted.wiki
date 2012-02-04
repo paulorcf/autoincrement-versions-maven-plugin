@@ -80,3 +80,5 @@ That's it!
 
 = Multiple child projects =
 You can run this on a multi-module Maven project and as each artifact's version is incremented, any projects referring to it in the same build will have their corresponding references updated too.
+
+So, in this example, if we had two other projects in this build that used to refer to the old *com.example:my-project:1.0.1* their dependencies will have been automatically updated to point to *com.example:my-project:1.0.2*!
