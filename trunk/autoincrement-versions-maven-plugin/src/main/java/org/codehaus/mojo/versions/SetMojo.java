@@ -370,9 +370,12 @@ public class SetMojo
     private String incrementVersion(String version) throws VersionParseException {
     	VersionInfo versionInfo = new DefaultVersionInfo(version);
     	
-    	if (versionInfo.isSnapshot()) {
+    	if (versionInfo.isSnapshot())
+    	{
     		return versionInfo.getNextVersion().getSnapshotVersionString();
-    	} else {
+    	}
+    	else
+    	{
     		return versionInfo.getNextVersion().getReleaseVersionString();
     	}
 	}
