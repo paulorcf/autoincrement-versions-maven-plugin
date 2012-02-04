@@ -39,14 +39,16 @@ You can, of course, bind the plugin execution to the phase of your choice. Here 
 Unless you've grabbed the plugin source and installed it into your local repository, you're going to want to add a repository entry to your POM file too:
 
 {{{
-<repository>
-    <id>autoincrement-versions-maven-plugin</id>
-    <name>autoincrement-versions-maven-plugin</name>
-    <url>http://autoincrement-versions-maven-plugin.googlecode.com/svn/repo</url>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
-</repository>
+<pluginRepositories>
+    <pluginRepository>
+        <id>autoincrement-versions-maven-plugin</id>
+        <name>autoincrement-versions-maven-plugin</name>
+        <url>http://autoincrement-versions-maven-plugin.googlecode.com/svn/repo</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </pluginRepository>
+</pluginRepositories>
 }}}
 
 = Example =
