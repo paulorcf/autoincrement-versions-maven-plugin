@@ -475,4 +475,11 @@
       </reporting>
     </profile>
   </profiles>
+
+	<distributionManagement>
+		<repository>
+			<id>autoincrement-versions-maven-plugin-releases</id>
+			<url>file:///${repo.deploy.path}</url>
+		</repository>
+	</distributionManagement>
 </project>
