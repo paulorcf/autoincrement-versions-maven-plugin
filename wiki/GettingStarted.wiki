@@ -1,0 +1,81 @@
+#summary Quick set-up and usage instructions.
+
+= Introduction =
+
+Here are some steps to get you started using the plugin.
+
+*NOTE: * As this plugin is based on the existing 'versions-maven-plugin' (http://mojo.codehaus.org/versions-maven-plugin/), please see its documentation for details of its supported goals, usage etc.
+
+= Details =
+
+You can add the plugin to your POM as follows:
+
+{{{
+<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>autoincrement-versions-maven-plugin</artifactId>
+	<version>2.0-SNAPSHOT</version>
+	<executions>
+		<execution>
+			<id>update-pom-versions</id>
+			<goals>
+				<goal>set</goal>
+				<goal>commit</goal>
+			</goals>
+			<phase>compile</phase>
+			<configuration>
+				<autoIncrementVersion>true</autoIncrementVersion>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
+}}}
+
+Notice the all-important `<autoIncrementVersion>true</autoIncrementVersion>` configuration setting.
+
+You can, of course, bind the plugin execution to the phase of your choice. Here we are using *compile* as an example.
+
+= Example =
+Using the settings above, if you were then to run the following command:
+
+{{{
+mvn compile
+}}}
+
+...on a project like this:
+{{{
+<project ... >
+    <groupId>com.example</groupId>
+    <artifactId>my-project</artifactId>
+    <version>1.0.1</version>
+...
+}}}
+
+You would see output like this:
+
+{{{
+...
+[INFO] 
+[INFO] --- autoincrement-versions-maven-plugin:2.0-SNAPSHOT:set (update-pom-versions) @ my-project ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /Users/pete/Development/workspace/mobile
+[INFO] Processing eu.foxse.mobile:mobile
+[INFO]     Updating project eu.foxse.mobile:mobile
+[INFO]         from version 1.0.1 to 1.0.2
+...
+}}}
+
+Sure enough, your project POM's version has been updated.
+
+{{{
+<project ... >
+    <groupId>com.example</groupId>
+    <artifactId>my-project</artifactId>
+    <version>1.0.2</version>
+...
+}}}
+
+That's it!
+
+= Multiple child projects =
+You can run this on a multi-module Maven project and as each artifact's version is incremented, any projects referring to it in the same build will have their corresponding references updated too.
