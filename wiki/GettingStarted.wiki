@@ -59,9 +59,10 @@ You would see output like this:
 [INFO] --- autoincrement-versions-maven-plugin:2.0-SNAPSHOT:set (update-pom-versions) @ my-project ---
 [INFO] Searching for local aggregator root...
 [INFO] Local aggregation root: /Users/pete/Development/workspace/mobile
-[INFO] Processing eu.foxse.mobile:mobile
-[INFO]     Updating project eu.foxse.mobile:mobile
+[INFO] Processing com.example:my-project
+[INFO]     Updating project com.example:my-project
 [INFO]         from version 1.0.1 to 1.0.2
+[INFO]
 ...
 }}}
 
