@@ -191,7 +191,7 @@ public class SetMojo
         	try
         	{
 				newVersion = incrementVersion(oldVersion);
-			} catch (VersionParseException e)
+			} catch ( VersionParseException e )
 			{
 				throw new MojoExecutionException( e.getMessage(), e );
 			}
