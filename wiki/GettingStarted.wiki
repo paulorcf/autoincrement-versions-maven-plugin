@@ -35,6 +35,17 @@ Notice the all-important `<autoIncrementVersion>true</autoIncrementVersion>` con
 
 You can, of course, bind the plugin execution to the phase of your choice. Here we are using *compile* as an example.
 
+== Repository ==
+Unless you've grabbed the plugin source and installed it into your local repository, you're going to want to add a repository entry to your POM file too:
+
+{{{
+<repository>
+    <id>autoincrement-versions-maven-plugin</id>
+    <name>autoincrement-versions-maven-plugin</name>
+    <url>http://autoincrement-versions-maven-plugin.googlecode.com/svn/repo</url>
+</repository>
+}}}
+
 = Example =
 Using the settings above, if you were then to run the following command:
 
