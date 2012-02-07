@@ -48,7 +48,7 @@ import org.codehaus.mojo.versions.utils.DelegatingContextualLog;
 import org.codehaus.plexus.util.StringUtils;
 
 /**
- * Sets the current projects version, updating the details of any child modules as necessary.
+ * Abstract base class for Set Mojos.
  *
  * @author Pete Cornish
  * @since 2.0
