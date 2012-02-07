@@ -19,7 +19,7 @@ You can add the plugin to your POM as follows:
 		<execution>
 			<id>update-pom-versions</id>
 			<goals>
-				<goal>set</goal>
+				<goal>increment</goal>
 				<goal>commit</goal>
 			</goals>
 			<phase>compile</phase>
@@ -31,9 +31,9 @@ You can add the plugin to your POM as follows:
 </plugin>
 }}}
 
-Notice the all-important `<autoIncrementVersion>true</autoIncrementVersion>` configuration setting.
+Notice the use of the `increment` goal.
 
-You can, of course, bind the plugin execution to the phase of your choice. Here we are using *compile* as an example.
+You can, of course, bind the plugin execution to the phase of your choice. Here we are using `compile` as an example.
 
 == Repository ==
 Unless you've grabbed the plugin source and installed it into your local repository, you're going to want to add a repository entry to your POM file too:
@@ -72,7 +72,7 @@ You would see output like this:
 {{{
 ...
 [INFO] 
-[INFO] --- autoincrement-versions-maven-plugin:2.0-SNAPSHOT:set (update-pom-versions) @ my-project ---
+[INFO] --- autoincrement-versions-maven-plugin:2.0-SNAPSHOT:increment (update-pom-versions) @ my-project ---
 [INFO] Searching for local aggregator root...
 [INFO] Local aggregation root: /Users/developer/Development/workspace/example
 [INFO] Processing com.example:my-project
