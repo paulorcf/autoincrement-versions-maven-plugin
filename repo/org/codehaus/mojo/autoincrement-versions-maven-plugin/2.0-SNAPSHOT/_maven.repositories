@@ -1,4 +1,6 @@
 #NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Sat Feb 04 02:24:40 GMT 2012
+#Tue Feb 07 14:52:39 GMT 2012
 autoincrement-versions-maven-plugin-2.0-SNAPSHOT.jar>=
+autoincrement-versions-maven-plugin-2.0-SNAPSHOT.pom>autoincrement-versions-maven-plugin=
+autoincrement-versions-maven-plugin-2.0-SNAPSHOT.jar>autoincrement-versions-maven-plugin=
 autoincrement-versions-maven-plugin-2.0-SNAPSHOT.pom>=
