@@ -17,7 +17,7 @@ A dependency on the *maven-release-manager* has been added to the versions-maven
 
  `org.codehaus.mojo.versions.SetMojo` _(modified)_
 
-The increment functionality lives in a new `IncrementMojo`. Since it shares a lot with the `SetMojo`, they now extend a base class containing the common functionality.
+The increment functionality lives in a new `IncrementMojo`. Since it shares a lot with the `SetMojo`, they now both extend a base class containing the common functionality.
 
 = Patch file =
 
