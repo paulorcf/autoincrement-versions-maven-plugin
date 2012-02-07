@@ -10,10 +10,15 @@ The code was forked from https://svn.codehaus.org/mojo/trunk/mojo/versions-maven
 
 I have relied on existing Maven project functionality (notably the *maven-release-manager*, also used by the *maven-release-plugin*) to perform the version increment functionality.
 
-A dependency on the *maven-release-manager* has been added to the versions-maven-plugin POM, and the code changes are localised to the `org.codehaus.mojo.versions.SetMojo` class.
+A dependency on the *maven-release-manager* has been added to the versions-maven-plugin POM, and the code changes are localised to the following classes:
+ `org.codehaus.mojo.versions.AbstractVersionsSetMojo` _(new)_
+
+ `org.codehaus.mojo.versions.IncrementMojo` _(new)_
+
+ `org.codehaus.mojo.versions.SetMojo` _(modified)_
 
 = Patch file =
 
 There is a patch file that you can apply to the plugin at the repository above to add this functionality.
 
-See [http://code.google.com/p/autoincrement-versions-maven-plugin/source/browse/files/autoincrement-versions-maven-plugin-patch.txt autoincrement-versions-maven-plugin-patch.txt]
+See [http://code.google.com/p/autoincrement-versions-maven-plugin/source/browse/files/autoincrement-versions-maven-plugin-patch.txt autoincrement-versions-maven-plugin-patch-2.txt]
